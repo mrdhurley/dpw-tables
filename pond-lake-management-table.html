@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pond & Lake Management Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1470af;
+      --blue-deep: #0164a5;
+      --ink: #273548;
+      --muted: #687384;
+      --pale: #f4f8fb;
+      --shadow: 0 3px 10px rgba(7,24,43,.12);
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Poppins, sans-serif;
+      color: var(--ink);
+      background: var(--pale);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .comparison-table thead {
+      background: var(--blue-deep);
+      color: #fff;
+    }
+    .comparison-table th {
+      padding: 16px 18px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
+    .comparison-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e6eaed;
+      font-size: 14px;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    .comparison-table tbody tr:hover {
+      background: #f9fbfc;
+    }
+    
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 10px 12px;
+        display: block;
+        width: 100%;
+      }
+      .comparison-table thead {
+        display: none;
+      }
+      .comparison-table td:before {
+        content: attr(data-label);
+        font-weight: 700;
+        display: block;
+        margin-bottom: 4px;
+        color: var(--blue-deep);
+      }
+      .comparison-table tbody tr {
+        margin-bottom: 16px;
+        display: block;
+        border: 1px solid #e6eaed;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Frequency</th>
+        <th>Benefit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Service"><strong>Algae &amp; Aquatic Weed Control</strong></td>
+        <td data-label="Frequency">Monthly during the growing season (April-October)</td>
+        <td data-label="Benefit">Clears green water, surface scum, and nuisance vegetation to restore clarity and appearance</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Water Quality Management</strong></td>
+        <td data-label="Frequency">Quarterly testing, with treatment as needed</td>
+        <td data-label="Benefit">Keeps oxygen, clarity, and chemistry balanced to prevent fish stress, odors, and compliance issues</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Aeration &amp; Fountains</strong></td>
+        <td data-label="Frequency">Year-round operation with seasonal maintenance</td>
+        <td data-label="Benefit">Improves circulation and dissolved oxygen while enhancing the visual appeal of the water</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Shoreline Management</strong></td>
+        <td data-label="Frequency">Project-based, with annual inspections</td>
+        <td data-label="Benefit">Stops erosion and stabilizes banks to protect access, safety, and property value</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Bathymetric Mapping</strong></td>
+        <td data-label="Frequency">Every 5-10 years, or before dredging</td>
+        <td data-label="Benefit">Measures depth and sediment to guide maintenance planning, budgeting, and restoration</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Fish &amp; Habitat Management</strong></td>
+        <td data-label="Frequency">Seasonal assessments, with stocking as needed</td>
+        <td data-label="Benefit">Supports healthy fish populations and a balanced, resilient aquatic ecosystem</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
