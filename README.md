@@ -1,4 +1,4 @@
-# Dragonfly Pond Works - Comparison Tables
+# Dragonfly Pond Works Tables
 
 This repository hosts comparison tables for the Dragonfly Pond Works service category pages.
 
