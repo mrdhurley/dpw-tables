@@ -40,30 +40,70 @@
     .comparison-table th {
       padding: 16px 18px;
       text-align: left;
-      font-size: 14px;
+    }
+    /* Column headings as h3 */
+    .comparison-table th h3 {
+      margin: 0;
+      color: #fff;
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: .05em;
+      line-height: 1.2;
     }
     .comparison-table td {
       padding: 14px 18px;
       border-bottom: 1px solid #e6eaed;
       font-size: 14px;
+      vertical-align: top;
     }
     .comparison-table tbody tr:last-child td {
       border-bottom: 0;
     }
-    .comparison-table tbody tr:hover {
-      background: #f9fbfc;
-    }
-    
-    /* Optimized for 300px iframe width - always show 3-column layout */
-    .comparison-table th,
-    .comparison-table td {
-      font-size: 11px;
-      padding: 10px 8px;
-    }
-    .comparison-table th {
-      font-size: 10px;
+
+    /* Graceful mobile layout - stacks into labeled cards on narrow widths */
+    @media (max-width: 600px) {
+      .comparison-table {
+        border-radius: var(--radius);
+        box-shadow: none;
+        background: transparent;
+      }
+      .comparison-table thead {
+        display: none;
+      }
+      .comparison-table,
+      .comparison-table tbody,
+      .comparison-table tr,
+      .comparison-table td {
+        display: block;
+        width: 100%;
+      }
+      .comparison-table tr {
+        margin-bottom: 16px;
+        background: #fff;
+        border: 1px solid #e6eaed;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .comparison-table td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #eef2f5;
+        font-size: 13px;
+      }
+      .comparison-table tbody tr td:last-child {
+        border-bottom: 0;
+      }
+      .comparison-table td:before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: var(--blue-deep);
+      }
     }
   </style>
 </head>
@@ -71,9 +111,9 @@
   <table class="comparison-table">
     <thead>
       <tr>
-        <th>Service</th>
-        <th>Frequency</th>
-        <th>Benefit</th>
+        <th><h3>Service</h3></th>
+        <th><h3>Frequency</h3></th>
+        <th><h3>Benefit</h3></th>
       </tr>
     </thead>
     <tbody>
