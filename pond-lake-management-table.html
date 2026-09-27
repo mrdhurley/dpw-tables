@@ -27,17 +27,28 @@
     }
     .comparison-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       background: #ffffff;
-      border-radius: var(--radius);
+      border-radius: 8px;
       box-shadow: var(--shadow);
-      border-left: 1px solid #e6eaed;
-      border-right: 1px solid #e6eaed;
-      border-bottom: 1px solid #e6eaed;
+      border: 1px solid #e6eaed;
     }
     .comparison-table thead {
       background: var(--blue-deep);
       color: #fff;
+    }
+    .comparison-table thead tr:first-child th:first-child {
+      border-top-left-radius: 8px;
+    }
+    .comparison-table thead tr:first-child th:last-child {
+      border-top-right-radius: 8px;
+    }
+    .comparison-table tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 8px;
+    }
+    .comparison-table tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 8px;
     }
     .comparison-table th {
       padding: 16px 18px;
