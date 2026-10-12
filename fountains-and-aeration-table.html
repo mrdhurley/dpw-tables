@@ -179,5 +179,20 @@
       </tr>
     </tbody>
   </table>
+  <script>
+    /* Reports this table's height to the parent page so the iframe can auto-size. */
+    (function () {
+      var last = 0;
+      function send() {
+        var h = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+        if (h !== last) { last = h; parent.postMessage({ type: 'dpw-table-height', height: h }, '*'); }
+      }
+      window.addEventListener('load', send);
+      window.addEventListener('resize', send);
+      if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+      if (document.fonts) document.fonts.ready.then(send);
+      send();
+    })();
+  </script>
 </body>
 </html>
