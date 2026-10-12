@@ -81,6 +81,13 @@
     .comparison-table td a:hover {
       text-decoration: underline;
     }
+    .comparison-table tr.group-row td {
+      background: var(--pale);
+      color: var(--blue-deep);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 18px;
+    }
 
     /* Graceful mobile layout - stacks into labeled cards on narrow widths */
     @media (max-width: 600px) {
@@ -123,6 +130,20 @@
         font-size: 12px;
         color: var(--blue-deep);
       }
+      .comparison-table tr.group-row {
+        margin: 8px 0 10px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+      .comparison-table tr.group-row td {
+        background: transparent;
+        padding: 4px 2px;
+        border: 0;
+      }
+      .comparison-table tr.group-row td:before {
+        content: none;
+      }
     }
   </style>
 </head>
@@ -131,45 +152,48 @@
     <thead>
       <tr>
         <th><h3>Service</h3></th>
-        <th><h3>Frequency</h3></th>
-        <th><h3>Benefit</h3></th>
+        <th><h3>When to Call</h3></th>
+        <th><h3>What It Does</h3></th>
       </tr>
     </thead>
     <tbody>
+      <tr class="group-row"><td colspan="3">Wildlife</td></tr>
       <tr>
         <td data-label="Service"><strong>Non-Lethal Goose &amp; Waterfowl Control</strong></td>
-        <td data-label="Frequency">Seasonal, during peak activity</td>
-        <td data-label="Benefit">Reduces waterfowl pressure and droppings around ponds and shorelines with humane methods</td>
+        <td data-label="When to Call">Seasonal, during peak activity</td>
+        <td data-label="What It Does">Reduces waterfowl pressure and droppings around ponds and shorelines with humane methods</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Beaver Dam Devices</strong></td>
-        <td data-label="Frequency">Installed once, with periodic checks</td>
-        <td data-label="Benefit">Manages water levels behind beaver dams to limit flooding</td>
+        <td data-label="When to Call">When beaver dams raise water levels or cause flooding</td>
+        <td data-label="What It Does">Manages water levels behind beaver dams to limit flooding</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Nuisance Mammal Control</strong></td>
-        <td data-label="Frequency">As needed when activity is found</td>
-        <td data-label="Benefit">Protects banks, dams, and structures from burrowing and chewing damage</td>
+        <td data-label="When to Call">As needed when activity is found</td>
+        <td data-label="What It Does">Protects banks, dams, and structures from burrowing and chewing damage</td>
       </tr>
+      <tr class="group-row"><td colspan="3">Water Supply &amp; Equipment</td></tr>
       <tr>
         <td data-label="Service"><strong>Water Well Monitoring, Drilling &amp; Metering</strong></td>
-        <td data-label="Frequency">Ongoing monitoring, with drilling as needed</td>
-        <td data-label="Benefit">Tracks and supports a reliable water supply for irrigation and property needs</td>
+        <td data-label="When to Call">Ongoing monitoring, with drilling as needed</td>
+        <td data-label="What It Does">Tracks and supports a reliable water supply for irrigation and property needs</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Lake Irrigation &amp; Pumps</strong></td>
-        <td data-label="Frequency">Seasonal service, with repairs as needed</td>
-        <td data-label="Benefit">Keeps irrigation drawn from ponds and lakes running reliably</td>
+        <td data-label="When to Call">Seasonal service, with repairs as needed</td>
+        <td data-label="What It Does">Keeps irrigation drawn from ponds and lakes running reliably</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Aquatic Equipment Leasing</strong></td>
-        <td data-label="Frequency">Short or long term, based on project needs</td>
-        <td data-label="Benefit">Provides the aquatic equipment a project requires without the cost of buying it</td>
+        <td data-label="When to Call">Short or long term, based on project needs</td>
+        <td data-label="What It Does">Provides the aquatic equipment a project requires without the cost of buying it</td>
       </tr>
+      <tr class="group-row"><td colspan="3">Indoor Environments</td></tr>
       <tr>
         <td data-label="Service"><strong>Indoor Air Quality &amp; Mold Investigation</strong></td>
-        <td data-label="Frequency">As needed when concerns arise</td>
-        <td data-label="Benefit">Identifies moisture and mold issues that affect indoor environments</td>
+        <td data-label="When to Call">As needed when concerns arise</td>
+        <td data-label="What It Does">Identifies moisture and mold issues that affect indoor environments</td>
       </tr>
     </tbody>
   </table>

@@ -81,6 +81,13 @@
     .comparison-table td a:hover {
       text-decoration: underline;
     }
+    .comparison-table tr.group-row td {
+      background: var(--pale);
+      color: var(--blue-deep);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 18px;
+    }
 
     /* Graceful mobile layout - stacks into labeled cards on narrow widths */
     @media (max-width: 600px) {
@@ -123,6 +130,20 @@
         font-size: 12px;
         color: var(--blue-deep);
       }
+      .comparison-table tr.group-row {
+        margin: 8px 0 10px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+      .comparison-table tr.group-row td {
+        background: transparent;
+        padding: 4px 2px;
+        border: 0;
+      }
+      .comparison-table tr.group-row td:before {
+        content: none;
+      }
     }
   </style>
 </head>
@@ -131,45 +152,45 @@
     <thead>
       <tr>
         <th><h3>Service</h3></th>
-        <th><h3>Frequency</h3></th>
-        <th><h3>Benefit</h3></th>
+        <th><h3>Signs You Need It</h3></th>
+        <th><h3>What We Do</h3></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/mechanical-dredging" target="_top">Mechanical Dredging</a></strong></td>
-        <td data-label="Frequency">Project-based, when sediment limits depth</td>
-        <td data-label="Benefit">Removes accumulated sediment with excavation equipment to restore depth and capacity</td>
+        <td data-label="Signs You Need It">Shallow areas, thick weed growth, odor, or partly buried inlets and outlets</td>
+        <td data-label="What We Do">Removes built-up sediment with excavators, long reach machines, or clamshell buckets</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/hydraulic-dredging" target="_top">Hydraulic Dredging</a></strong></td>
-        <td data-label="Frequency">Project-based, guided by a sediment study</td>
-        <td data-label="Benefit">Pumps out sediment with minimal disruption, and we reuse it to rebuild shorelines</td>
+        <td data-label="Signs You Need It">Sediment buildup where the pond needs to stay filled during the work</td>
+        <td data-label="What We Do">Pumps sediment through a pipeline to a dewatering area, with less disturbance to your property</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/shoreline-restoration" target="_top">Shoreline Restoration</a></strong></td>
-        <td data-label="Frequency">Project-based, with periodic inspections</td>
-        <td data-label="Benefit">Rebuilds eroded banks to protect access, safety, and property value</td>
+        <td data-label="Signs You Need It">Undercut or slumping banks, exposed roots, and soil falling into the water</td>
+        <td data-label="What We Do">Rebuilds eroded banks with structural and planted materials</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/streambank-stabilization" target="_top">Streambank Stabilization</a></strong></td>
-        <td data-label="Frequency">Project-based</td>
-        <td data-label="Benefit">Steadies moving water banks to reduce erosion and protect nearby land</td>
+        <td data-label="Signs You Need It">Eroding banks along a stream, creek, or river</td>
+        <td data-label="What We Do">Protects the bank from moving water so the land holds and the water runs cleaner downstream</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/shoreline-stabilization" target="_top">Shoreline Stabilization</a></strong></td>
-        <td data-label="Frequency">Project-based</td>
-        <td data-label="Benefit">Protects coastal and lake edges from wave action and ongoing land loss</td>
+        <td data-label="Signs You Need It">Steep banks, fallen trees, or shifting structures on larger lake, river, or coastal shorelines</td>
+        <td data-label="What We Do">Protects the shoreline from waves, current, and runoff</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/erosion-and-sediment-control" target="_top">Erosion &amp; Sediment Control</a></strong></td>
-        <td data-label="Frequency">During construction and as site conditions require</td>
-        <td data-label="Benefit">Keeps soil in place and out of the water to protect water quality and support compliance</td>
+        <td data-label="Signs You Need It">Active or regulated sites with permit conditions to meet</td>
+        <td data-label="What We Do">Practices that keep soil on the land and out of stormwater systems</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/slope-stabilization-and-grading" target="_top">Slope Stabilization &amp; Grading</a></strong></td>
-        <td data-label="Frequency">Project-based</td>
-        <td data-label="Benefit">Shapes the land around the water so it drains properly and stays stable</td>
+        <td data-label="Signs You Need It">Slopes shedding soil or low spots where water collects</td>
+        <td data-label="What We Do">Reshapes and secures ground so water moves correctly and banks hold their form</td>
       </tr>
     </tbody>
   </table>

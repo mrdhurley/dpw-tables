@@ -81,6 +81,13 @@
     .comparison-table td a:hover {
       text-decoration: underline;
     }
+    .comparison-table tr.group-row td {
+      background: var(--pale);
+      color: var(--blue-deep);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 18px;
+    }
 
     /* Graceful mobile layout - stacks into labeled cards on narrow widths */
     @media (max-width: 600px) {
@@ -123,6 +130,20 @@
         font-size: 12px;
         color: var(--blue-deep);
       }
+      .comparison-table tr.group-row {
+        margin: 8px 0 10px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+      .comparison-table tr.group-row td {
+        background: transparent;
+        padding: 4px 2px;
+        border: 0;
+      }
+      .comparison-table tr.group-row td:before {
+        content: none;
+      }
     }
   </style>
 </head>
@@ -131,85 +152,73 @@
     <thead>
       <tr>
         <th><h3>Service</h3></th>
-        <th><h3>Frequency</h3></th>
-        <th><h3>Benefit</h3></th>
+        <th><h3>What It Does</h3></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td data-label="Service"><strong>Wetland Restoration, Creation &amp; Channeling</strong></td>
-        <td data-label="Frequency">Project-based</td>
-        <td data-label="Benefit">Rebuilds or creates wetland areas that filter water and support native habitat</td>
-      </tr>
-      <tr>
-        <td data-label="Service"><strong>Conservation Area, Easement &amp; Forest Management</strong></td>
-        <td data-label="Frequency">Ongoing stewardship program</td>
-        <td data-label="Benefit">Keeps protected land healthy and in line with easement requirements</td>
-      </tr>
-      <tr>
-        <td data-label="Service"><strong>Conservation Planning &amp; Construction</strong></td>
-        <td data-label="Frequency">Project-based</td>
-        <td data-label="Benefit">Plans and installs native landscapes that hold soil and support wildlife</td>
-      </tr>
+      <tr class="group-row"><td colspan="2">Studies &amp; Permitting</td></tr>
       <tr>
         <td data-label="Service"><strong>Wetland Delineation</strong></td>
-        <td data-label="Frequency">Before site planning or permitting</td>
-        <td data-label="Benefit">Identifies wetland boundaries so projects can move forward with confidence</td>
+        <td data-label="What It Does">Identifies wetland boundaries so projects can move forward with confidence</td>
       </tr>
       <tr>
         <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/pond-and-lake-sediment-studies" target="_top">Pond &amp; Lake Sediment Studies</a></strong></td>
-        <td data-label="Frequency">Before dredging or restoration planning</td>
-        <td data-label="Benefit">Measures sediment depth, composition, and accumulation to guide dredge and restoration plans</td>
+        <td data-label="What It Does">Measures sediment depth, composition, and accumulation to guide dredge and restoration plans</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Wetland &amp; Waterway Permitting and Jurisdictional Determinations</strong></td>
-        <td data-label="Frequency">Before work begins in or near water</td>
-        <td data-label="Benefit">Clarifies which rules apply and supports the permits a project needs</td>
+        <td data-label="What It Does">Clarifies which rules apply and supports the permits a project needs</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Environmental Site Assessments (Phase I &amp; II)</strong></td>
-        <td data-label="Frequency">Before property transactions or development</td>
-        <td data-label="Benefit">Identifies environmental conditions that could affect a property</td>
+        <td data-label="What It Does">Identifies environmental conditions that could affect a property</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Rare &amp; Threatened Species Determination</strong></td>
-        <td data-label="Frequency">Before site planning or construction</td>
-        <td data-label="Benefit">Confirms whether protected species are present so work can be planned around them</td>
+        <td data-label="What It Does">Confirms whether protected species are present so work can be planned around them</td>
+      </tr>
+      <tr class="group-row"><td colspan="2">Restoration &amp; Construction</td></tr>
+      <tr>
+        <td data-label="Service"><strong>Wetland Restoration, Creation &amp; Channeling</strong></td>
+        <td data-label="What It Does">Rebuilds or creates wetland areas that filter water and support native habitat</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Conservation Landscape Planning &amp; Construction</strong></td>
+        <td data-label="What It Does">Plans and installs native landscapes that hold soil and support wildlife</td>
+      </tr>
+      <tr class="group-row"><td colspan="2">Land &amp; Habitat Management</td></tr>
+      <tr>
+        <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/riparian-buffer-management" target="_top">Riparian Buffer Management</a></strong></td>
+        <td data-label="What It Does">Maintains the planted strip along a shoreline that filters runoff and holds the bank</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Conservation Area, Easement &amp; Forest Management</strong></td>
+        <td data-label="What It Does">Keeps protected land healthy and in line with easement requirements</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Invasive Species Control for Natural Areas</strong></td>
-        <td data-label="Frequency">Seasonal treatments, with follow-up visits</td>
-        <td data-label="Benefit">Removes invasive plants so native vegetation can recover</td>
+        <td data-label="What It Does">Removes invasive plants so native vegetation can recover</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Right-of-Way Vegetation Management</strong></td>
-        <td data-label="Frequency">Scheduled cycles based on growth</td>
-        <td data-label="Benefit">Keeps corridors clear for access, safety, and maintenance</td>
+        <td data-label="What It Does">Keeps corridors clear for access, safety, and maintenance</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Drone Herbicide Application</strong></td>
-        <td data-label="Frequency">Seasonal, as treatment areas require</td>
-        <td data-label="Benefit">Reaches hard-to-access areas with targeted treatment</td>
-      </tr>
-      <tr>
-        <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/riparian-buffer-management" target="_top">Riparian Buffer Management</a></strong></td>
-        <td data-label="Frequency">Seasonal care with periodic inspections</td>
-        <td data-label="Benefit">Maintains the vegetated edge that filters runoff and protects the shoreline</td>
+        <td data-label="What It Does">Reaches hard-to-access areas with targeted treatment</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Prescribed Burning</strong></td>
-        <td data-label="Frequency">Seasonal, when conditions allow</td>
-        <td data-label="Benefit">Renews native plant communities and reduces invasive growth</td>
+        <td data-label="What It Does">Renews native plant communities and reduces invasive growth</td>
       </tr>
+      <tr class="group-row"><td colspan="2">Community &amp; Funding</td></tr>
       <tr>
         <td data-label="Service"><strong>Educational Outreach Programs</strong></td>
-        <td data-label="Frequency">Scheduled with your community or organization</td>
-        <td data-label="Benefit">Helps community members understand and care for local water and land</td>
+        <td data-label="What It Does">Helps community members understand and care for local water and land</td>
       </tr>
       <tr>
         <td data-label="Service"><strong>Grant Writing</strong></td>
-        <td data-label="Frequency">Aligned with funding cycles</td>
-        <td data-label="Benefit">Helps secure funding for restoration and conservation projects</td>
+        <td data-label="What It Does">Helps secure funding for restoration and conservation projects</td>
       </tr>
     </tbody>
   </table>
