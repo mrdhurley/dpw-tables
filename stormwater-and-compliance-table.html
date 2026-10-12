@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stormwater &amp; Compliance Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1470af;
+      --blue-deep: #0164a5;
+      --ink: #273548;
+      --muted: #687384;
+      --pale: #f4f8fb;
+      --shadow: 0 3px 10px rgba(7,24,43,.12);
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins, sans-serif;
+      color: var(--ink);
+      background: transparent;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e6eaed;
+    }
+    .comparison-table thead {
+      background: var(--blue-deep);
+      color: #fff;
+    }
+    .comparison-table thead tr:first-child th:first-child {
+      border-top-left-radius: 8px;
+    }
+    .comparison-table thead tr:first-child th:last-child {
+      border-top-right-radius: 8px;
+    }
+    .comparison-table tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 8px;
+    }
+    .comparison-table tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 8px;
+    }
+    .comparison-table th {
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    /* Column headings as h3 */
+    .comparison-table th h3 {
+      margin: 0;
+      color: #fff;
+      font-family: Poppins, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .comparison-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e6eaed;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .comparison-table td a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .comparison-table td a:hover {
+      text-decoration: underline;
+    }
+
+    /* Graceful mobile layout - stacks into labeled cards on narrow widths */
+    @media (max-width: 600px) {
+      .comparison-table {
+        border-radius: var(--radius);
+        box-shadow: none;
+        background: transparent;
+      }
+      .comparison-table thead {
+        display: none;
+      }
+      .comparison-table,
+      .comparison-table tbody,
+      .comparison-table tr,
+      .comparison-table td {
+        display: block;
+        width: 100%;
+      }
+      .comparison-table tr {
+        margin-bottom: 16px;
+        background: #fff;
+        border: 1px solid #e6eaed;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .comparison-table td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #eef2f5;
+        font-size: 13px;
+      }
+      .comparison-table tbody tr td:last-child {
+        border-bottom: 0;
+      }
+      .comparison-table td:before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 12px;
+        color: var(--blue-deep);
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th><h3>Service</h3></th>
+        <th><h3>Frequency</h3></th>
+        <th><h3>Benefit</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/routine-maintenance-vegetation-management" target="_top">Routine Maintenance &amp; Vegetation Management</a></strong></td>
+        <td data-label="Frequency">Scheduled visits throughout the year</td>
+        <td data-label="Benefit">Keeps stormwater ponds and each BMP clear of debris and overgrowth so they work as designed</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong><a href="https://dpw.brizy.site/services/regulatory-bmp-compliance-inspections" target="_top">Regulatory &amp; BMP Compliance Inspections</a></strong></td>
+        <td data-label="Frequency">On the schedule your permit requires</td>
+        <td data-label="Benefit">Documents the condition of each BMP (best management practice) and flags issues before they become violations</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Compliance Repairs &amp; System Reconstruction</strong></td>
+        <td data-label="Frequency">As needed after an inspection</td>
+        <td data-label="Benefit">Restores failing stormwater devices so the system meets its permit and drains as intended</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Stormwater Pond &amp; System Management</strong></td>
+        <td data-label="Frequency">Ongoing program with routine visits</td>
+        <td data-label="Benefit">Brings inspections, maintenance, and repairs together under one plan for the whole system</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Pipe, Riser &amp; Culvert Repair</strong></td>
+        <td data-label="Frequency">As needed, often after inspections or storms</td>
+        <td data-label="Benefit">Fixes damaged outlet structures to prevent flooding, erosion, and compliance issues</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Vacuum Truck &amp; Underground Clean-out</strong></td>
+        <td data-label="Frequency">Periodic, based on sediment buildup</td>
+        <td data-label="Benefit">Removes trapped sediment and debris from underground systems to restore capacity</td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>Basin-to-BMP Conversion</strong></td>
+        <td data-label="Frequency">Project-based</td>
+        <td data-label="Benefit">Turns an underperforming basin into a planted BMP that filters runoff and improves appearance</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
