@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragonfly Pond Works Company at a Glance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1470af;
+      --blue-deep: #0164a5;
+      --green: #5DAE2E;
+      --ink: #273548;
+      --muted: #687384;
+      --line: #e6eaed;
+      --shadow: 0 3px 10px rgba(7,24,43,.12);
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0 0 12px;
+      font-family: Poppins, sans-serif;
+      color: var(--ink);
+      background: transparent;
+    }
+    .dpw-glance {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      margin: 0;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--green);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .dpw-glance__item {
+      margin: 0;
+      padding: 24px 22px;
+      background: #fff;
+      min-width: 0;
+    }
+    .dpw-glance__item--wide { grid-column: span 2; }
+    .dpw-glance dt {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .dpw-glance dd {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .dpw-glance a {
+      color: var(--blue-deep);
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    .dpw-glance a:hover { text-decoration: underline; }
+    .dpw-glance a:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 2px;
+      text-decoration: underline;
+    }
+    .dpw-glance__email {
+      white-space: nowrap;
+      font-size: clamp(14px, 4.6vw, 20px);
+    }
+    .dpw-glance__count {
+      display: block;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--blue-deep);
+    }
+    .dpw-glance__states {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .dpw-glance__states li {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Tablet: 2 columns */
+    @media (max-width: 900px) {
+      .dpw-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    /* Mobile: 1 column; the email shrinks instead of wrapping */
+    @media (max-width: 560px) {
+      .dpw-glance { grid-template-columns: minmax(0, 1fr); }
+      .dpw-glance__item--wide { grid-column: auto; }
+      .dpw-glance__item { padding: 18px 16px; }
+      .dpw-glance__states li { font-size: 17px; }
+      .dpw-glance__count { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <dl class="dpw-glance" aria-label="Dragonfly Pond Works company facts">
+    <div class="dpw-glance__item">
+      <dt>Phone</dt>
+      <dd><a href="tel:+18777663979" target="_top">877-766-3979</a></dd>
+    </div>
+    <div class="dpw-glance__item">
+      <dt>Hours</dt>
+      <dd>Mon-Fri: 8AM to 5PM</dd>
+    </div>
+    <div class="dpw-glance__item dpw-glance__item--wide">
+      <dt>Email</dt>
+      <dd><a class="dpw-glance__email" href="mailto:info@dragonflypondworks.com" target="_top">info@dragonflypondworks.com</a></dd>
+    </div>
+    <div class="dpw-glance__item dpw-glance__item--wide">
+      <dt>10 States Served</dt>
+      <dd>
+        <ul class="dpw-glance__states">
+          <li><a href="https://dragonflypondworks.com/locations#delaware" target="_top">Delaware</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#florida" target="_top">Florida</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#georgia" target="_top">Georgia</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#illinois" target="_top">Illinois</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#maryland" target="_top">Maryland</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#north-carolina" target="_top">North Carolina</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#south-carolina" target="_top">South Carolina</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#tennessee" target="_top">Tennessee</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#texas" target="_top">Texas</a></li>
+          <li><a href="https://dragonflypondworks.com/locations#virginia" target="_top">Virginia</a></li>
+        </ul>
+      </dd>
+    </div>
+    <div class="dpw-glance__item">
+      <dt>Locations</dt>
+      <dd><a href="https://dragonflypondworks.com/locations" target="_top"><span class="dpw-glance__count">20</span>Branch offices</a></dd>
+    </div>
+    <div class="dpw-glance__item">
+      <dt>Services</dt>
+      <dd><span class="dpw-glance__count">50</span>Across 6 categories</dd>
+    </div>
+  </dl>
+  <script>
+    /* Reports this table's height to the parent page so the iframe can auto-size. */
+    (function () {
+      var last = 0;
+      function send() {
+        var h = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+        if (h !== last) { last = h; parent.postMessage({ type: 'dpw-table-height', height: h }, '*'); }
+      }
+      window.addEventListener('load', send);
+      window.addEventListener('resize', send);
+      if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+      if (document.fonts) document.fonts.ready.then(send);
+      send();
+    })();
+  </script>
+</body>
+</html>
